@@ -1,0 +1,68 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://small_dynamicfont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://PlayButton.gd" type="Script" id=2]
+[ext_resource path="res://ExitButton.gd" type="Script" id=3]
+
+[node name="MainMenu" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 613.0
+margin_bottom = 381.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 15.0
+margin_top = 14.0
+margin_right = 474.0
+margin_bottom = 226.0
+custom_fonts/font = ExtResource( 1 )
+text = "The roby video game kek
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Control"]
+margin_left = -4.0
+margin_top = 151.0
+margin_right = 455.0
+margin_bottom = 363.0
+custom_fonts/font = ExtResource( 1 )
+text = "by=mwa
+
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayButton" type="Button" parent="Control"]
+margin_left = 89.0
+margin_top = 43.0
+margin_right = 207.0
+margin_bottom = 81.0
+custom_fonts/font = ExtResource( 1 )
+text = "JOUE STP"
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ExitButton" type="Button" parent="Control"]
+margin_left = 90.0
+margin_top = 83.0
+margin_right = 208.0
+margin_bottom = 121.0
+custom_fonts/font = ExtResource( 1 )
+text = "salu..."
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/PlayButton" to="Control/PlayButton" method="_on_PlayButton_pressed"]
+[connection signal="pressed" from="Control/ExitButton" to="Control/ExitButton" method="_on_ExitButton_pressed"]
